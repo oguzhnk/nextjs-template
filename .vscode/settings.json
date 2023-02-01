@@ -1,0 +1,10 @@
+{
+  "multiCommand.commands": [
+    {
+      "command": "multiCommand.lint",
+      "interval": 500,
+      "sequence": ["editor.action.organizeImports", "eslint.executeAutofix", "editor.action.formatDocument"]
+    }
+  ],
+  "files.exclude": {}
+}

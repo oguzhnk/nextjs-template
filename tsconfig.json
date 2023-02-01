@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "downlevelIteration": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "paths": {
+      "~types": ["./utils/types/index"],
+      "~guards": ["./utils/guards/index"],
+      "~pages/*": ["./pages/*"],
+      "~components/*": ["./components/*"],
+      "~utils/*": ["./utils/*"],
+      "~styles/*": ["./styles/*"],
+      "~public/*": ["./public/*"],
+      "~/*": ["./*"]
+    }
+  },
+  "include": ["next-env.d.ts", "mantine.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
+}

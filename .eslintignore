@@ -1,0 +1,4 @@
+**/dist/*
+**/bin.js
+**/tmp/*
+pnpm-lock.yaml
