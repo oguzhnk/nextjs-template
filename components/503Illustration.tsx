@@ -2,7 +2,7 @@ import { useMantineTheme } from '@mantine/core'
 
 import type { CC } from '~types'
 
-const Illustration: CC<React.ComponentPropsWithoutRef<'svg'>> = props => {
+export const Illustration: CC<React.ComponentPropsWithoutRef<'svg'>> = props => {
   const theme = useMantineTheme()
   return (
     <svg fill={'none'} viewBox={'0 0 332 145'} xmlns={'http://www.w3.org/2000/svg'} {...props}>
@@ -15,5 +15,3 @@ const Illustration: CC<React.ComponentPropsWithoutRef<'svg'>> = props => {
     </svg>
   )
 }
-
-export default Illustration

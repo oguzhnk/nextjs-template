@@ -6,7 +6,7 @@ import type { ReactNode } from 'react'
 
 import type { Page } from '~types'
 
-import ColorSchemeToggler from '~components/ColorSchemeToggler'
+import { ColorSchemeToggler } from '~components/ColorSchemeToggler'
 
 const Auth: Page<{
   pageProps: AppProps['pageProps']

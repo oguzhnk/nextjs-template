@@ -1,5 +1,5 @@
+import { ArrowRightOnRectangleIcon } from '@heroicons/react/24/outline'
 import { ActionIcon, Container, Group, Text } from '@mantine/core'
-import { IconLogout } from '@tabler/icons'
 import { useCallback } from 'react'
 import { shallow } from 'zustand/shallow'
 
@@ -29,7 +29,7 @@ const Home: Page = () => {
 
         {/* eslint-disable-next-line @typescript-eslint/no-misused-promises */}
         <ActionIcon size={'lg'} onClick={handleLogout}>
-          <IconLogout size={20} />
+          <ArrowRightOnRectangleIcon height={22} width={22} />
         </ActionIcon>
       </Group>
     </Container>

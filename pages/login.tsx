@@ -38,7 +38,6 @@ const Login: Page = function () {
 
     validate: {
       email: value => (/^\S+@\S+$/.test(value) ? null : 'Invalid e-mail'),
-
       password: value =>
         value !== '' ? (value.length >= 8 ? null : 'Password must be greater than 8 character') : 'Password is required'
     }
@@ -68,7 +67,7 @@ const Login: Page = function () {
       showNotification({
         color: 'red',
         title: 'Error',
-        message: 'Login information is wrong',
+        message: 'Login informations is wrong',
         autoClose: 3000
       })
     } finally {
@@ -128,15 +127,6 @@ const Login: Page = function () {
               {...form.getInputProps('password')}
             />
           </Stack>
-          {/* <Group position="right" mt="xs">
-              <Anchor<"a">
-                onClick={(event) => event.preventDefault()}
-                href="#"
-                size="sm"
-              >
-                {t("login.forgotPasswordText")}
-              </Anchor>
-            </Group> */}
           <Button fullWidth={true} loaderProps={{ variant: 'bars' }} loading={isLoading} type={'submit'}>
             {'Login'}
           </Button>

@@ -3,6 +3,10 @@
   "extends": "@giveerr/eslint-config",
   "overrides": [
     {
+      "files": ["**/*.js"],
+      "extends": ["@giveerr/eslint-config-prettier-javascript"]
+    },
+    {
       "files": ["**/*.ts"],
       "parser": "@typescript-eslint/parser",
       "parserOptions": {

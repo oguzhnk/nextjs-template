@@ -1,5 +1,5 @@
+import { ExclamationTriangleIcon } from '@heroicons/react/24/outline'
 import { Button, Stack, Text, useMantineTheme } from '@mantine/core'
-import { IconAlertTriangle } from '@tabler/icons'
 
 import React from 'react'
 
@@ -14,7 +14,7 @@ const ErrorContent: CC<{
 
   return (
     <Stack align={'center'} pt={'xl'}>
-      <IconAlertTriangle color={theme.colors.red[9]} size={36} />
+      <ExclamationTriangleIcon color={theme.colors.red[9]} height={22} width={22} />
       <Stack align={'center'} spacing={4}>
         <Text size={'xl'} weight={500}>
           {'Oops, there is an error!'}
@@ -30,7 +30,7 @@ const ErrorContent: CC<{
   )
 }
 
-// eslint-disable-next-line react/require-optimization, react/no-multi-comp
+// eslint-disable-next-line react/no-multi-comp, react/require-optimization
 class ErrorBoundary extends React.Component {
   state: {
     hasError: boolean

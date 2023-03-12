@@ -1,10 +1,10 @@
-import { startNavigationProgress, completeNavigationProgress, NavigationProgress } from '@mantine/nprogress'
+import { NavigationProgress, completeNavigationProgress, startNavigationProgress } from '@mantine/nprogress'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 
 import type { CC } from '~types'
 
-const RouterTransition: CC = () => {
+export const RouterTransition: CC = () => {
   const router = useRouter()
 
   useEffect(() => {
@@ -29,5 +29,3 @@ const RouterTransition: CC = () => {
 
   return <NavigationProgress autoReset={true} />
 }
-
-export default RouterTransition

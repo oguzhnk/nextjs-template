@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 
 import type { Page } from '~types'
 
-import Illustration from '~components/503Illustration'
+import { Illustration } from '~components/503Illustration'
 
 const useStyles = createStyles(theme => ({
   root: {
@@ -51,7 +51,7 @@ const useStyles = createStyles(theme => ({
     maxWidth: 460,
     margin: 'auto',
     marginTop: theme.spacing.xl,
-    marginBottom: theme.spacing.xl * 1.5,
+    marginBottom: +theme.spacing.xl * 1.5,
     color: theme.colors[theme.primaryColor][1]
   }
 }))

@@ -1,6 +1,6 @@
 import { MantineProvider, ColorSchemeProvider } from '@mantine/core'
 import { ModalsProvider } from '@mantine/modals'
-import { NotificationsProvider } from '@mantine/notifications'
+import { Notifications } from '@mantine/notifications'
 
 import Head from 'next/head'
 
@@ -11,7 +11,7 @@ import type { ReactNode } from 'react'
 
 import type { Page } from '~types'
 
-import RouterTransition from '~components/RouterTransition'
+import { RouterTransition } from '~components/RouterTransition'
 import { fontWeights } from '~utils/defaults'
 import { useStore } from '~utils/store'
 
@@ -48,7 +48,7 @@ export const CommonProvider: Page<{
               return {
                 body: {
                   overflowX: 'hidden',
-                  background: theme.colorScheme === 'dark' ? theme.colors.dark[9] : '#FDFDFD'
+                  background: theme.colorScheme === 'dark' ? theme.colors.dark[9] : theme.colors.gray[0]
                 }
               }
             },
@@ -59,10 +59,9 @@ export const CommonProvider: Page<{
           withNormalizeCSS={true}
         >
           <RouterTransition />
+          <Notifications position={'bottom-right'} zIndex={1000}/>
           <ModalsProvider>
-            <NotificationsProvider position={'bottom-right'} zIndex={1000}>
-              {children}
-            </NotificationsProvider>
+            {children}
           </ModalsProvider>
         </MantineProvider>
       </ColorSchemeProvider>
